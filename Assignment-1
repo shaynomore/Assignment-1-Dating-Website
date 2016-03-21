@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Assignment 1: Dating Website Assessment </title>
+  <meta name="author" content="Shay Galland"
+  <!-- Assignment 1 for the Coursera course HTML, CSS, and Javascript
+    taught by David Rossiter of The Hong Kong University of Science and Technology-->
+
+<style>
+fieldset{
+  border:10px solid yellow;
+  background:lightyellow;
+  margin-bottom:10px;
+  width:720px;
+
+}
+
+label{
+  width:180px;
+  display:inline-block;
+  text-align: right;
+  text-align: top;
+  }
+
+.plabels {width:auto;}
+.sred  {text-align:center;background:red;color:white}
+.sblue {text-align:center;background:blue;color:white}
+
+label:hover{font-size:40px;}
+input:hover{font-size:40px;}
+span:hover{font-size: 40px;}
+
+</style>
+  </head>
+
+<body>
+<h1>Please Enter Your Details For Our Dating Website!</h1>
+
+<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form/data" >
+
+  <fieldset>
+    <legend> Your Face </legend>
+    <label for"avatar">Your image:</label> <input type="file" name="avatar" required> <br>
+    <label for"preview">Image preview: </label><img id="preview"> <br>
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+  </fieldset><br>
+
+  <fieldset>
+    <legend> Your General Details </legend>
+    <label for"Name">Name: </label><input type="text" name="Name"required>  <br>
+    <label for"Gender">Gender: </label>
+            <span class=plabels>
+              <input type="radio" name="gender" required> Male
+              <input type="radio" name="gender" required> Female
+            </span>
+            <br>
+    <label for"age">Age: </label><input type="number" required> <br>
+    <label for"DOB">Date of birth: </label><input type="date" name="DOB" required><br>
+    <label for"Favorite Color">Favorite color: </label><input type="color" name="Favorite Color" required><br>
+    <label for"country">Which country: </label><select name="Country">
+      <option value="Canada">Canada</option>
+      <option value="China">China</option>
+      <option value="France">France</option>
+      <option value="Great Britain">Great Britain</option>
+      <option value="Mexico">Mexico</option>
+      <option value="USA">USA</option>
+    </select>
+  </fieldset><br>
+
+  <fieldset>
+    <legend> Your Indicators </legend>
+    <label for"height">Height: </label>
+          <span class="sred"> Short</span><input type="range" min="0" max="100" name="height" required> <span class="sblue"> Tall</span><br>
+    <label for"salary">Salary: </label>
+          <span class="sred">Poor </span><input type="range" min="0" max="100" name="salary" required> <span class="sblue">Rich</span><br>
+  </fieldset><br>
+
+  <fieldset>
+    <legend> Your Contact Information </legend>
+    <label for"email">Email: </label><input type="email" name="email" required><br>
+    <label for"mobile">Mobile: </label><input type="tel" name="mobile" required> <br>
+    <label for"address">Address: </label><textarea width=360px height=50px name="address"> </textarea><br>
+    <label for"Contact method">Method to contact you: </label>
+        <class=.plabels><input type="checkbox" name="email contact" required> Email
+        <class=.plabels><input type="checkbox" name="Whatsapp contact"> Whatsapp
+        <class=.plabels><input type="checkbox" name="Chat contact"> In-app chat<br>
+  </fieldset><br>
+
+<input type="submit" value="submit ">
+
+</form>
+
+</body>
+
+</html>
